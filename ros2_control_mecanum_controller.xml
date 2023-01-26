@@ -1,0 +1,7 @@
+<library path="ros2_control_mecanum_controller">
+  <class name="ros2_control_mecanum_controller/MecanumVelocityController" type="mecanum_controller_velocity::MecanumVelocityController" base_class_type="controller_interface::ControllerInterface">
+  <description>
+    The mecanum drive velocity controller transforms linear and angular velocity messages into signals for each wheels for a mecanum robot base.
+  </description>
+  </class>
+</library>
