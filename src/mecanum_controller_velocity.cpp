@@ -170,10 +170,10 @@ controller_interface::return_type MecanumVelocityController::update(
 
 
     std::array<double, 4> w;
-    w[0] = registered_front_left_wheel_handle_->velocity.get().get_value()/wheel_params_.gearing;
-    w[1] = registered_front_right_wheel_handle_->velocity.get().get_value()/wheel_params_.gearing;
-    w[2] = registered_back_left_wheel_handle_->velocity.get().get_value()/wheel_params_.gearing;
-    w[3] = registered_back_right_wheel_handle_->velocity.get().get_value()/wheel_params_.gearing;
+    w[0] = registered_front_left_wheel_handle_->feedback.get().get_value()/wheel_params_.gearing;
+    w[1] = registered_front_right_wheel_handle_->feedback.get().get_value()/wheel_params_.gearing;
+    w[2] = registered_back_left_wheel_handle_->feedback.get().get_value()/wheel_params_.gearing;
+    w[3] = registered_back_right_wheel_handle_->feedback.get().get_value()/wheel_params_.gearing;
 
     if (std::isnan(w[0]) || std::isnan(w[1]) || std::isnan(w[2]) || std::isnan(w[3]))
     {
